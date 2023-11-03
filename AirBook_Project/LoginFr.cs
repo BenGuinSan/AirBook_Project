@@ -96,6 +96,10 @@ namespace AirBook_Project
                 case "Email hoặc mật khẩu không chỉnh xác!":
                     MessageBox.Show("Email hoặc mật khẩu không chính xác");
                     return;
+                // Sau khi làm chức năng đăng ký thì không cho người dùng tạo tài khoản có pw khoảng trắng thì có thể bỏ case này đi
+                case "Pasword_has_space":
+                    MessageBox.Show("Mật khẩu không được chứa ký tự khoảng trắng");
+                    return;
             }
 
             MessageBox.Show("Đăng nhập thành công");

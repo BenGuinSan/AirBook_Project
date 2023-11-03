@@ -26,6 +26,11 @@ namespace BLL
                 return "requeid_PW";
             }
 
+            if (user.Pwd.Contains(" "))
+            {
+                return "Pasword_has_space";
+            }
+
             string info = usAccess.checkLogin(user);
             return info;
         }
