@@ -63,6 +63,16 @@ namespace AirBook_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap action_arrow_back {
+            get {
+                object obj = ResourceManager.GetObject("action-arrow-back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap action_login {
             get {
                 object obj = ResourceManager.GetObject("action-login", resourceCulture);

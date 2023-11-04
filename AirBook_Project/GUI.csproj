@@ -62,16 +62,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LoginFr.cs">
+    <Compile Include="SignInFr.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginFr.Designer.cs">
-      <DependentUpon>LoginFr.cs</DependentUpon>
+    <Compile Include="SignInFr.Designer.cs">
+      <DependentUpon>SignInFr.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="LoginFr.resx">
-      <DependentUpon>LoginFr.cs</DependentUpon>
+    <Compile Include="SignUpFr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUpFr.Designer.cs">
+      <DependentUpon>SignUpFr.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="SignInFr.resx">
+      <DependentUpon>SignInFr.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -83,6 +89,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SignUpFr.resx">
+      <DependentUpon>SignUpFr.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -111,6 +120,9 @@
       <Project>{20396786-e335-4de5-b876-c252898c7708}</Project>
       <Name>DTO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\action-arrow-back.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

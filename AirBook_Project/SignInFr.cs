@@ -13,7 +13,7 @@ using BLL;
 
 namespace AirBook_Project
 {
-    public partial class LoginFr : KryptonForm
+    public partial class SignInFr : KryptonForm
     {
         User user = new User();
         UserBLL userBLL = new UserBLL();
@@ -21,7 +21,7 @@ namespace AirBook_Project
         int movX;
         int movY;
 
-        public LoginFr()
+        public SignInFr()
         {
             InitializeComponent();
         }
@@ -117,7 +117,8 @@ namespace AirBook_Project
 
         private void btnDK_Click(object sender, EventArgs e)
         {
-
+            SignUpFr signUp = new SignUpFr();
+            signUp.Show();
         }
     }
 }
