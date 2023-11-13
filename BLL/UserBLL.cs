@@ -15,7 +15,6 @@ namespace BLL
         {
             // Kiem tra nghiep vu
 
-
             if (user.Email == "")
             {
                 return "requeid_Email";
@@ -34,5 +33,6 @@ namespace BLL
             string info = usAccess.checkLogin(user);
             return info;
         }
+
     }
 }

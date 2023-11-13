@@ -30,8 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.btnPrePage = new System.Windows.Forms.PictureBox();
             this.btnMini = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -56,12 +58,13 @@
             this.label12 = new System.Windows.Forms.Label();
             this.txtPhone = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.btnCreateUsers = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.btnPrePage = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.genderSelect = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnPrePage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genderSelect)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonPanel1
@@ -83,6 +86,19 @@
             this.kryptonPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.kryptonPanel1_MouseDown);
             this.kryptonPanel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.kryptonPanel1_MouseMove);
             this.kryptonPanel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.kryptonPanel1_MouseUp);
+            // 
+            // btnPrePage
+            // 
+            this.btnPrePage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(138)))), ((int)(((byte)(165)))));
+            this.btnPrePage.Image = global::AirBook_Project.Properties.Resources.action_arrow_back;
+            this.btnPrePage.Location = new System.Drawing.Point(25, 15);
+            this.btnPrePage.Name = "btnPrePage";
+            this.btnPrePage.Size = new System.Drawing.Size(32, 32);
+            this.btnPrePage.TabIndex = 14;
+            this.btnPrePage.TabStop = false;
+            this.btnPrePage.Click += new System.EventHandler(this.btnPrePage_Click);
+            this.btnPrePage.MouseLeave += new System.EventHandler(this.btnPrePage_MouseLeave);
+            this.btnPrePage.MouseHover += new System.EventHandler(this.btnPrePage_MouseHover);
             // 
             // btnMini
             // 
@@ -113,6 +129,18 @@
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             this.btnExit.MouseLeave += new System.EventHandler(this.btnExit_MouseLeave);
             this.btnExit.MouseHover += new System.EventHandler(this.btnExit_MouseHover);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(138)))), ((int)(((byte)(165)))));
+            this.pictureBox1.Image = global::AirBook_Project.Properties.Resources.airbooklogo;
+            this.pictureBox1.Location = new System.Drawing.Point(107, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(144, 34);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // kryptonPalette1
             // 
@@ -300,7 +328,7 @@
             // 
             // timePick
             // 
-            this.timePick.CustomFormat = "dd/MM/yyyy";
+            this.timePick.CustomFormat = "MM/dd/yyyy";
             this.timePick.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.timePick.Location = new System.Drawing.Point(182, 401);
             this.timePick.Name = "timePick";
@@ -313,14 +341,14 @@
             this.timePick.StateCommon.Border.Rounding = 6;
             this.timePick.StateCommon.Border.Width = 1;
             this.timePick.TabIndex = 19;
-            this.timePick.ValueNullable = new System.DateTime(2023, 11, 4, 19, 43, 48, 0);
+            this.timePick.ValueNullable = new System.DateTime(2023, 11, 7, 0, 0, 0, 0);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
-            this.label9.Location = new System.Drawing.Point(22, 450);
+            this.label9.Location = new System.Drawing.Point(22, 487);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(71, 16);
@@ -329,7 +357,7 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(181, 437);
+            this.txtID.Location = new System.Drawing.Point(181, 472);
             this.txtID.Margin = new System.Windows.Forms.Padding(4);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(156, 31);
@@ -346,7 +374,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
-            this.label10.Location = new System.Drawing.Point(22, 489);
+            this.label10.Location = new System.Drawing.Point(22, 526);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(69, 16);
@@ -355,7 +383,7 @@
             // 
             // txtNation
             // 
-            this.txtNation.Location = new System.Drawing.Point(182, 476);
+            this.txtNation.Location = new System.Drawing.Point(182, 511);
             this.txtNation.Margin = new System.Windows.Forms.Padding(4);
             this.txtNation.Name = "txtNation";
             this.txtNation.Size = new System.Drawing.Size(156, 31);
@@ -372,7 +400,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
-            this.label11.Location = new System.Drawing.Point(22, 528);
+            this.label11.Location = new System.Drawing.Point(22, 565);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(54, 16);
@@ -381,7 +409,7 @@
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(182, 515);
+            this.txtAddress.Location = new System.Drawing.Point(182, 550);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(156, 31);
@@ -398,7 +426,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
-            this.label12.Location = new System.Drawing.Point(22, 567);
+            this.label12.Location = new System.Drawing.Point(22, 604);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(98, 16);
@@ -407,7 +435,7 @@
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(181, 554);
+            this.txtPhone.Location = new System.Drawing.Point(182, 589);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(156, 31);
@@ -422,7 +450,7 @@
             // btnCreateUsers
             // 
             this.btnCreateUsers.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCreateUsers.Location = new System.Drawing.Point(25, 614);
+            this.btnCreateUsers.Location = new System.Drawing.Point(25, 652);
             this.btnCreateUsers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCreateUsers.Name = "btnCreateUsers";
             this.btnCreateUsers.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(138)))), ((int)(((byte)(165)))));
@@ -483,37 +511,47 @@
             this.btnCreateUsers.StateTracking.Border.Width = 1;
             this.btnCreateUsers.TabIndex = 28;
             this.btnCreateUsers.Values.Text = "Đăng ký";
+            this.btnCreateUsers.Click += new System.EventHandler(this.btnCreateUsers_Click);
             // 
-            // btnPrePage
+            // label13
             // 
-            this.btnPrePage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(138)))), ((int)(((byte)(165)))));
-            this.btnPrePage.Image = global::AirBook_Project.Properties.Resources.action_arrow_back;
-            this.btnPrePage.Location = new System.Drawing.Point(25, 15);
-            this.btnPrePage.Name = "btnPrePage";
-            this.btnPrePage.Size = new System.Drawing.Size(32, 32);
-            this.btnPrePage.TabIndex = 14;
-            this.btnPrePage.TabStop = false;
-            this.btnPrePage.MouseLeave += new System.EventHandler(this.btnPrePage_MouseLeave);
-            this.btnPrePage.MouseHover += new System.EventHandler(this.btnPrePage_MouseHover);
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
+            this.label13.Location = new System.Drawing.Point(22, 449);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(63, 16);
+            this.label13.TabIndex = 29;
+            this.label13.Text = "Giới tính";
             // 
-            // pictureBox1
+            // genderSelect
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(138)))), ((int)(((byte)(165)))));
-            this.pictureBox1.Image = global::AirBook_Project.Properties.Resources.airbooklogo;
-            this.pictureBox1.Location = new System.Drawing.Point(107, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(144, 34);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.genderSelect.DropDownWidth = 152;
+            this.genderSelect.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.genderSelect.Location = new System.Drawing.Point(181, 436);
+            this.genderSelect.Name = "genderSelect";
+            this.genderSelect.Palette = this.kryptonPalette1;
+            this.genderSelect.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.genderSelect.Size = new System.Drawing.Size(156, 29);
+            this.genderSelect.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.genderSelect.StateCommon.ComboBox.Border.Rounding = 6;
+            this.genderSelect.StateCommon.ComboBox.Border.Width = 1;
+            this.genderSelect.TabIndex = 30;
+            this.genderSelect.Text = "Nam";
             // 
             // SignUpFr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(360, 675);
+            this.ClientSize = new System.Drawing.Size(360, 716);
+            this.Controls.Add(this.genderSelect);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.btnCreateUsers);
             this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.label12);
@@ -550,6 +588,7 @@
             this.kryptonPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnPrePage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genderSelect)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -586,5 +625,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtPhone;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnCreateUsers;
         private System.Windows.Forms.PictureBox btnPrePage;
+        private System.Windows.Forms.Label label13;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox genderSelect;
     }
 }
