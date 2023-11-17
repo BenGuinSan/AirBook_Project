@@ -62,6 +62,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AIRBOOKDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AIRBOOKDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SignInFr.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +106,17 @@
     <EmbeddedResource Include="TicKetEUCfr.resx">
       <DependentUpon>TicKetEUCfr.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="AIRBOOKDataSet.xsc">
+      <DependentUpon>AIRBOOKDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AIRBOOKDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AIRBOOKDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AIRBOOKDataSet.xss">
+      <DependentUpon>AIRBOOKDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -150,6 +166,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\image 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info-flight-from.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info-flight-to.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info-time.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
