@@ -28,30 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.btnDX = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.btnTK = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnKM = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnDN = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.btnDX = new System.Windows.Forms.Button();
-            this.btnTK = new System.Windows.Forms.Button();
-            this.btnKM = new System.Windows.Forms.Button();
             this.btnMyVe = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.btnMuaVe = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
+            this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.btnDN = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -59,9 +57,9 @@
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
             this.kryptonPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonPanel1
@@ -117,6 +115,23 @@
             this.panel9.Size = new System.Drawing.Size(200, 42);
             this.panel9.TabIndex = 23;
             // 
+            // btnDX
+            // 
+            this.btnDX.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(138)))), ((int)(((byte)(165)))));
+            this.btnDX.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDX.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDX.ForeColor = System.Drawing.Color.White;
+            this.btnDX.Image = global::AirBook_Project.Properties.Resources.action_logout;
+            this.btnDX.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDX.Location = new System.Drawing.Point(-7, -13);
+            this.btnDX.Name = "btnDX";
+            this.btnDX.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnDX.Size = new System.Drawing.Size(230, 73);
+            this.btnDX.TabIndex = 17;
+            this.btnDX.Text = "Đăng xuất";
+            this.btnDX.UseVisualStyleBackColor = false;
+            // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.PaleTurquoise;
@@ -132,6 +147,24 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(200, 42);
             this.panel6.TabIndex = 21;
+            // 
+            // btnTK
+            // 
+            this.btnTK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(138)))), ((int)(((byte)(165)))));
+            this.btnTK.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTK.ForeColor = System.Drawing.Color.White;
+            this.btnTK.Image = global::AirBook_Project.Properties.Resources.nav_account;
+            this.btnTK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTK.Location = new System.Drawing.Point(-7, -14);
+            this.btnTK.Name = "btnTK";
+            this.btnTK.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnTK.Size = new System.Drawing.Size(230, 73);
+            this.btnTK.TabIndex = 17;
+            this.btnTK.Text = "Tài khoản";
+            this.btnTK.UseVisualStyleBackColor = false;
+            this.btnTK.Click += new System.EventHandler(this.btnTK_Click);
             // 
             // panel7
             // 
@@ -149,6 +182,24 @@
             this.panel4.Size = new System.Drawing.Size(200, 42);
             this.panel4.TabIndex = 19;
             // 
+            // btnKM
+            // 
+            this.btnKM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(138)))), ((int)(((byte)(165)))));
+            this.btnKM.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnKM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKM.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKM.ForeColor = System.Drawing.Color.White;
+            this.btnKM.Image = global::AirBook_Project.Properties.Resources.nav_promotion;
+            this.btnKM.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKM.Location = new System.Drawing.Point(-7, -14);
+            this.btnKM.Name = "btnKM";
+            this.btnKM.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnKM.Size = new System.Drawing.Size(248, 73);
+            this.btnKM.TabIndex = 17;
+            this.btnKM.Text = "Khuyến mãi";
+            this.btnKM.UseVisualStyleBackColor = false;
+            this.btnKM.Click += new System.EventHandler(this.btnKM_Click);
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.PaleTurquoise;
@@ -165,6 +216,24 @@
             this.panel3.Size = new System.Drawing.Size(200, 42);
             this.panel3.TabIndex = 17;
             // 
+            // btnMyVe
+            // 
+            this.btnMyVe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(138)))), ((int)(((byte)(165)))));
+            this.btnMyVe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMyVe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMyVe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMyVe.ForeColor = System.Drawing.Color.White;
+            this.btnMyVe.Image = global::AirBook_Project.Properties.Resources.nav_my_ticket;
+            this.btnMyVe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMyVe.Location = new System.Drawing.Point(-4, -14);
+            this.btnMyVe.Name = "btnMyVe";
+            this.btnMyVe.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.btnMyVe.Size = new System.Drawing.Size(233, 73);
+            this.btnMyVe.TabIndex = 17;
+            this.btnMyVe.Text = "Vé của tôi";
+            this.btnMyVe.UseVisualStyleBackColor = false;
+            this.btnMyVe.Click += new System.EventHandler(this.btnMyVe_Click);
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.btnMuaVe);
@@ -173,6 +242,24 @@
             this.panel2.Size = new System.Drawing.Size(200, 42);
             this.panel2.TabIndex = 16;
             // 
+            // btnMuaVe
+            // 
+            this.btnMuaVe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(138)))), ((int)(((byte)(165)))));
+            this.btnMuaVe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMuaVe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMuaVe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMuaVe.ForeColor = System.Drawing.Color.White;
+            this.btnMuaVe.Image = global::AirBook_Project.Properties.Resources.nav_ticket;
+            this.btnMuaVe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMuaVe.Location = new System.Drawing.Point(-7, -14);
+            this.btnMuaVe.Name = "btnMuaVe";
+            this.btnMuaVe.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnMuaVe.Size = new System.Drawing.Size(211, 73);
+            this.btnMuaVe.TabIndex = 17;
+            this.btnMuaVe.Text = "Mua vé";
+            this.btnMuaVe.UseVisualStyleBackColor = false;
+            this.btnMuaVe.Click += new System.EventHandler(this.btnMuaVe_Click);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
@@ -180,6 +267,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 1);
             this.panel1.TabIndex = 15;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(138)))), ((int)(((byte)(165)))));
+            this.pictureBox1.Image = global::AirBook_Project.Properties.Resources.airbooklogo;
+            this.pictureBox1.Location = new System.Drawing.Point(26, 23);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(144, 34);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // kryptonPanel2
             // 
@@ -191,19 +290,6 @@
             this.kryptonPanel2.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.kryptonPanel2.StateCommon.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.kryptonPanel2.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(138)))), ((int)(((byte)(165)))));
-            this.label1.Location = new System.Drawing.Point(25, 23);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 29);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Mua vé";
             // 
             // btnDN
             // 
@@ -270,118 +356,18 @@
             this.btnDN.TabIndex = 12;
             this.btnDN.Values.Text = "Vé của tôi";
             // 
-            // btnDX
+            // label1
             // 
-            this.btnDX.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(138)))), ((int)(((byte)(165)))));
-            this.btnDX.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDX.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDX.ForeColor = System.Drawing.Color.White;
-            this.btnDX.Image = global::AirBook_Project.Properties.Resources.action_logout;
-            this.btnDX.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDX.Location = new System.Drawing.Point(-7, -13);
-            this.btnDX.Name = "btnDX";
-            this.btnDX.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnDX.Size = new System.Drawing.Size(230, 73);
-            this.btnDX.TabIndex = 17;
-            this.btnDX.Text = "Đăng xuất";
-            this.btnDX.UseVisualStyleBackColor = false;
-            // 
-            // btnTK
-            // 
-            this.btnTK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(138)))), ((int)(((byte)(165)))));
-            this.btnTK.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTK.ForeColor = System.Drawing.Color.White;
-            this.btnTK.Image = global::AirBook_Project.Properties.Resources.nav_account;
-            this.btnTK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTK.Location = new System.Drawing.Point(-7, -14);
-            this.btnTK.Name = "btnTK";
-            this.btnTK.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnTK.Size = new System.Drawing.Size(230, 73);
-            this.btnTK.TabIndex = 17;
-            this.btnTK.Text = "Tài khoản";
-            this.btnTK.UseVisualStyleBackColor = false;
-            this.btnTK.Click += new System.EventHandler(this.btnTK_Click);
-            // 
-            // btnKM
-            // 
-            this.btnKM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(138)))), ((int)(((byte)(165)))));
-            this.btnKM.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnKM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKM.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKM.ForeColor = System.Drawing.Color.White;
-            this.btnKM.Image = global::AirBook_Project.Properties.Resources.nav_promotion;
-            this.btnKM.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKM.Location = new System.Drawing.Point(-7, -14);
-            this.btnKM.Name = "btnKM";
-            this.btnKM.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnKM.Size = new System.Drawing.Size(248, 73);
-            this.btnKM.TabIndex = 17;
-            this.btnKM.Text = "Khuyến mãi";
-            this.btnKM.UseVisualStyleBackColor = false;
-            this.btnKM.Click += new System.EventHandler(this.btnKM_Click);
-            // 
-            // btnMyVe
-            // 
-            this.btnMyVe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(138)))), ((int)(((byte)(165)))));
-            this.btnMyVe.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMyVe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMyVe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMyVe.ForeColor = System.Drawing.Color.White;
-            this.btnMyVe.Image = global::AirBook_Project.Properties.Resources.nav_my_ticket;
-            this.btnMyVe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMyVe.Location = new System.Drawing.Point(-4, -14);
-            this.btnMyVe.Name = "btnMyVe";
-            this.btnMyVe.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.btnMyVe.Size = new System.Drawing.Size(233, 73);
-            this.btnMyVe.TabIndex = 17;
-            this.btnMyVe.Text = "Vé của tôi";
-            this.btnMyVe.UseVisualStyleBackColor = false;
-            this.btnMyVe.Click += new System.EventHandler(this.btnMyVe_Click);
-            // 
-            // btnMuaVe
-            // 
-            this.btnMuaVe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(138)))), ((int)(((byte)(165)))));
-            this.btnMuaVe.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMuaVe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMuaVe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMuaVe.ForeColor = System.Drawing.Color.White;
-            this.btnMuaVe.Image = global::AirBook_Project.Properties.Resources.nav_ticket;
-            this.btnMuaVe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMuaVe.Location = new System.Drawing.Point(-7, -14);
-            this.btnMuaVe.Name = "btnMuaVe";
-            this.btnMuaVe.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnMuaVe.Size = new System.Drawing.Size(211, 73);
-            this.btnMuaVe.TabIndex = 17;
-            this.btnMuaVe.Text = "Mua vé";
-            this.btnMuaVe.UseVisualStyleBackColor = false;
-            this.btnMuaVe.Click += new System.EventHandler(this.btnMuaVe_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(138)))), ((int)(((byte)(165)))));
-            this.pictureBox1.Image = global::AirBook_Project.Properties.Resources.airbooklogo;
-            this.pictureBox1.Location = new System.Drawing.Point(26, 23);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(144, 34);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // kryptonPalette1
-            // 
-            this.kryptonPalette1.FormStyles.FormMain.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(138)))), ((int)(((byte)(165)))));
-            this.kryptonPalette1.FormStyles.FormMain.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(138)))), ((int)(((byte)(165)))));
-            this.kryptonPalette1.FormStyles.FormMain.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(138)))), ((int)(((byte)(165)))));
-            this.kryptonPalette1.FormStyles.FormMain.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(138)))), ((int)(((byte)(165)))));
-            this.kryptonPalette1.FormStyles.FormMain.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonPalette1.FormStyles.FormMain.StateCommon.Border.Rounding = 16;
-            this.kryptonPalette1.FormStyles.FormMain.StateCommon.Border.Width = 1;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(138)))), ((int)(((byte)(165)))));
+            this.label1.Location = new System.Drawing.Point(25, 23);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(96, 29);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Mua vé";
             // 
             // TicKetEUCfr
             // 
@@ -404,10 +390,10 @@
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).EndInit();
             this.kryptonPanel2.ResumeLayout(false);
             this.kryptonPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -436,6 +422,5 @@
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel2;
         private System.Windows.Forms.Label label1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnDN;
-        private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette1;
     }
 }
