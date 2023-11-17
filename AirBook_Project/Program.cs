@@ -16,7 +16,7 @@ namespace AirBook_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SignInFr());
+            Application.Run(new TicKetEUCfr());
         }
     }
 }

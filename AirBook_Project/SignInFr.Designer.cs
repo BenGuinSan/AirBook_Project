@@ -77,12 +77,12 @@
             this.kryptonPanel1.Controls.Add(this.pictureBox1);
             this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
-            this.kryptonPanel1.Margin = new System.Windows.Forms.Padding(123, 18, 123, 17);
+            this.kryptonPanel1.Margin = new System.Windows.Forms.Padding(92, 15, 92, 14);
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Palette = this.kryptonPalette1;
             this.kryptonPanel1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.kryptonPanel1.PanelBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.FormMain;
-            this.kryptonPanel1.Size = new System.Drawing.Size(360, 62);
+            this.kryptonPanel1.Size = new System.Drawing.Size(270, 50);
             this.kryptonPanel1.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(138)))), ((int)(((byte)(165)))));
             this.kryptonPanel1.StateCommon.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(138)))), ((int)(((byte)(165)))));
             this.kryptonPanel1.StateCommon.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
@@ -97,9 +97,10 @@
             this.btnMini.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(138)))), ((int)(((byte)(165)))));
             this.btnMini.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMini.ForeColor = System.Drawing.Color.White;
-            this.btnMini.Location = new System.Drawing.Point(309, 9);
+            this.btnMini.Location = new System.Drawing.Point(232, 7);
+            this.btnMini.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.btnMini.Name = "btnMini";
-            this.btnMini.Size = new System.Drawing.Size(14, 18);
+            this.btnMini.Size = new System.Drawing.Size(12, 15);
             this.btnMini.TabIndex = 13;
             this.btnMini.Text = "-";
             this.btnMini.Click += new System.EventHandler(this.btnMini_Click);
@@ -112,9 +113,10 @@
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(138)))), ((int)(((byte)(165)))));
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(329, 9);
+            this.btnExit.Location = new System.Drawing.Point(247, 7);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(19, 18);
+            this.btnExit.Size = new System.Drawing.Size(16, 15);
             this.btnExit.TabIndex = 12;
             this.btnExit.Text = "X";
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -125,10 +127,10 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(138)))), ((int)(((byte)(165)))));
             this.pictureBox1.Image = global::AirBook_Project.Properties.Resources.airbooklogo;
-            this.pictureBox1.Location = new System.Drawing.Point(107, 15);
+            this.pictureBox1.Location = new System.Drawing.Point(80, 12);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(144, 34);
+            this.pictureBox1.Size = new System.Drawing.Size(108, 28);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -138,20 +140,18 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(138)))), ((int)(((byte)(165)))));
-            this.label1.Location = new System.Drawing.Point(113, 89);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(85, 72);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 29);
+            this.label1.Size = new System.Drawing.Size(112, 24);
             this.label1.TabIndex = 2;
             this.label1.Text = "Đăng nhập";
             // 
             // txtPW
             // 
-            this.txtPW.Location = new System.Drawing.Point(152, 181);
-            this.txtPW.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPW.Location = new System.Drawing.Point(114, 147);
             this.txtPW.Name = "txtPW";
             this.txtPW.PasswordChar = '*';
-            this.txtPW.Size = new System.Drawing.Size(185, 31);
+            this.txtPW.Size = new System.Drawing.Size(139, 27);
             this.txtPW.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtPW.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
@@ -163,10 +163,9 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(152, 142);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmail.Location = new System.Drawing.Point(114, 115);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(185, 31);
+            this.txtEmail.Size = new System.Drawing.Size(139, 27);
             this.txtEmail.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtEmail.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
@@ -181,10 +180,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
-            this.label3.Location = new System.Drawing.Point(21, 194);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(16, 158);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 18);
+            this.label3.Size = new System.Drawing.Size(66, 15);
             this.label3.TabIndex = 7;
             this.label3.Text = "Mật khẩu";
             // 
@@ -193,18 +191,17 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
-            this.label2.Location = new System.Drawing.Point(21, 155);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(16, 126);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 18);
+            this.label2.Size = new System.Drawing.Size(44, 15);
             this.label2.TabIndex = 6;
             this.label2.Text = "Email";
             // 
             // btnDN
             // 
             this.btnDN.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDN.Location = new System.Drawing.Point(25, 236);
-            this.btnDN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDN.Location = new System.Drawing.Point(19, 192);
+            this.btnDN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDN.Name = "btnDN";
             this.btnDN.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(138)))), ((int)(((byte)(165)))));
             this.btnDN.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(138)))), ((int)(((byte)(165)))));
@@ -218,7 +215,7 @@
             this.btnDN.OverrideDefault.Border.Rounding = 6;
             this.btnDN.OverrideDefault.Border.Width = 1;
             this.btnDN.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.btnDN.Size = new System.Drawing.Size(312, 34);
+            this.btnDN.Size = new System.Drawing.Size(234, 28);
             this.btnDN.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(138)))), ((int)(((byte)(165)))));
             this.btnDN.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(138)))), ((int)(((byte)(165)))));
             this.btnDN.StateCommon.Back.ColorAngle = 45F;
@@ -269,10 +266,10 @@
             // btnDK
             // 
             this.btnDK.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDK.Location = new System.Drawing.Point(25, 277);
-            this.btnDK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDK.Location = new System.Drawing.Point(19, 225);
+            this.btnDK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDK.Name = "btnDK";
-            this.btnDK.Size = new System.Drawing.Size(312, 34);
+            this.btnDK.Size = new System.Drawing.Size(234, 28);
             this.btnDK.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(243)))), ((int)(((byte)(246)))));
             this.btnDK.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(243)))), ((int)(((byte)(246)))));
             this.btnDK.StateCommon.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
@@ -291,10 +288,10 @@
             // 
             // SignInFr
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(360, 340);
+            this.ClientSize = new System.Drawing.Size(270, 276);
             this.Controls.Add(this.btnDN);
             this.Controls.Add(this.btnDK);
             this.Controls.Add(this.txtPW);
@@ -304,7 +301,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.kryptonPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "SignInFr";
             this.Palette = this.kryptonPalette1;
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;

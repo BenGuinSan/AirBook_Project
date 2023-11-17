@@ -76,6 +76,12 @@
     <Compile Include="SignUpFr.Designer.cs">
       <DependentUpon>SignUpFr.cs</DependentUpon>
     </Compile>
+    <Compile Include="TicKetEUCfr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TicKetEUCfr.Designer.cs">
+      <DependentUpon>TicKetEUCfr.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="SignInFr.resx">
       <DependentUpon>SignInFr.cs</DependentUpon>
     </EmbeddedResource>
@@ -91,6 +97,9 @@
     </Compile>
     <EmbeddedResource Include="SignUpFr.resx">
       <DependentUpon>SignUpFr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TicKetEUCfr.resx">
+      <DependentUpon>TicKetEUCfr.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -123,6 +132,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\action-arrow-back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nav-ticket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nav-my-ticket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nav-promotion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nav-account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\action-logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image 2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
