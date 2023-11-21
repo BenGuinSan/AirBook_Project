@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B3A8DBAB-545A-490B-8C60-7C9C30723720}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GUI</RootNamespace>
+    <AssemblyName>GUI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ComponentFactory.Krypton.Docking">
+      <HintPath>..\..\..\..\..\..\Downloads\Edge\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Navigator">
+      <HintPath>..\..\..\..\..\..\Downloads\Edge\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Ribbon">
+      <HintPath>..\..\..\..\..\..\Downloads\Edge\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Toolkit">
+      <HintPath>..\..\..\..\..\..\Downloads\Edge\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Workspace">
+      <HintPath>..\..\..\..\..\..\Downloads\Edge\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminGUI\Account.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminGUI\Account.Designer.cs">
+      <DependentUpon>Account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminGUI\AccountAuth.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminGUI\AccountAuth.Designer.cs">
+      <DependentUpon>AccountAuth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminGUI\Airline.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminGUI\Airline.Designer.cs">
+      <DependentUpon>Airline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminGUI\AirlinePlane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminGUI\AirlinePlane.Designer.cs">
+      <DependentUpon>AirlinePlane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminGUI\Airport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminGUI\Airport.Designer.cs">
+      <DependentUpon>Airport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminGUI\Feature.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminGUI\Feature.Designer.cs">
+      <DependentUpon>Feature.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminGUI\Flight.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminGUI\Flight.Designer.cs">
+      <DependentUpon>Flight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminGUI\Promo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminGUI\Promo.Designer.cs">
+      <DependentUpon>Promo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminGUI\Statistic.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminGUI\Statistic.Designer.cs">
+      <DependentUpon>Statistic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminGUI\Ticket.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminGUI\Ticket.Designer.cs">
+      <DependentUpon>Ticket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client.Designer.cs">
+      <DependentUpon>Client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientGUI\Account.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClientGUI\Account.Designer.cs">
+      <DependentUpon>Account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientGUI\BuyTicket.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClientGUI\BuyTicket.Designer.cs">
+      <DependentUpon>BuyTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientGUI\MyTicket.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClientGUI\MyTicket.Designer.cs">
+      <DependentUpon>MyTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientGUI\Promo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClientGUI\Promo.Designer.cs">
+      <DependentUpon>Promo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConstantDefine.cs" />
+    <Compile Include="NavigationControl.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminGUI\Account.resx">
+      <DependentUpon>Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminGUI\AccountAuth.resx">
+      <DependentUpon>AccountAuth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminGUI\Airline.resx">
+      <DependentUpon>Airline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminGUI\AirlinePlane.resx">
+      <DependentUpon>AirlinePlane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminGUI\Airport.resx">
+      <DependentUpon>Airport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminGUI\Feature.resx">
+      <DependentUpon>Feature.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminGUI\Flight.resx">
+      <DependentUpon>Flight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminGUI\Promo.resx">
+      <DependentUpon>Promo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminGUI\Statistic.resx">
+      <DependentUpon>Statistic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminGUI\Ticket.resx">
+      <DependentUpon>Ticket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client.resx">
+      <DependentUpon>Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientGUI\Account.resx">
+      <DependentUpon>Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientGUI\BuyTicket.resx">
+      <DependentUpon>BuyTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientGUI\MyTicket.resx">
+      <DependentUpon>MyTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientGUI\Promo.resx">
+      <DependentUpon>Promo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{a6bf50db-20b1-4adf-9ee0-62edc5f201ad}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{20396786-e335-4de5-b876-c252898c7708}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\action-add-black18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\action-add-pri18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\action-add-white18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\action-arrow-back-white18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\action-arrow-back-white32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\action-cancel-pri18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\action-cancel-white18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\action-delete-black18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\action-delete-red18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\action-delete-white18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\action-export-black18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\action-export-white18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\action-import-black18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\action-import-white18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\action-login-black20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\action-login-white18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\action-logout-white20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\action-print-white18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\action-refresh-black18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\action-refresh-pri18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\action-refresh-white18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\action-save-white18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\action-search-pri18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\action-search-white18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\action-tick-white18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info-account-pri20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info-airline-black20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info-airline-white32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info-airport-white32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info-flight-from-black20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info-flight-from-white20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info-flight-pri18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info-flight-to-black20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info-flight-to-white20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info-flight-white18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info-flight-white32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info-luggage-black20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info-my-ticket-white18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info-plane-id-black20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info-plane-id-white32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info-price-black20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info-promotion-pri18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info-promotion-white18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info-promotion-white32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info-seat-black20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info-ticket-black20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info-ticket-pri18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info-ticket-white18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info-ticket-white32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info-time-black20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info-time-white20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info-user-pri20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info-user-white32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nav-account-white20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nav-airline-white20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nav-airport-white20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nav-features-pri20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nav-features-white20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nav-flight-white20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nav-my-ticket-white20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nav-promotion-white20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nav-statistic-white20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nav-ticket-white20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\app-favicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-header-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\revenue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ticket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ticketbaner.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
