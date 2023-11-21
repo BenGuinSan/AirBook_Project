@@ -9,8 +9,8 @@ namespace DTO
     public class User
     {
         public string Pwd { get; set; }
-
         public string Email { get; set; }
+        public int IsDelete { get; set; }
  
     }
 }

@@ -23,40 +23,39 @@ namespace DAL
     }
     public class DatabaseAccess
     {
-        public static string checkLoginDTO(User user)
-        {
-            string userlg = null;
-            // Tao ket noi den db
-            SqlConnection conn = SqlConnectionData.Connect();
-            conn.Open();
+        //Check trên GUI vì còn phải check Role để xem nó có quyền gì rồi mới chuyển hướng cho vào AdminGUI hay ClientGUI
+        //Tức là cần load listBUS trước sau đó tìm object nếu tìm không có thì đăng nhập thất bại
+        //public static string checkLoginDTO(User user)
+        //{
+        //    string userlg = null;
+        //    // Tao ket noi den db
+        //    SqlConnection conn = SqlConnectionData.Connect();
+        //    conn.Open();
 
-            SqlCommand cmd = new SqlCommand("proc__login", conn);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue(@"Email", user.Email);
-            cmd.Parameters.AddWithValue(@"Pwd", user.Pwd);
-   
+        //    SqlCommand cmd = new SqlCommand("proc__login", conn);
+        //    cmd.CommandType = CommandType.StoredProcedure;
+        //    cmd.Parameters.AddWithValue(@"Email", user.Email);
+        //    cmd.Parameters.AddWithValue(@"Pwd", user.Pwd);
+        //    cmd.Parameters.AddWithValue(@"IsDelete", user.IsDelete);
+        //    cmd.Connection = conn;
 
-            cmd.Connection = conn;
-
-            SqlDataReader reader = cmd.ExecuteReader();
-
-            if (reader.HasRows)
-            {
-                while(reader.Read())
-                {
-                    userlg = reader.GetString(0);
-                    return userlg;
-                }
-
-                reader.Close();
-                conn.Close();
-            }
-            else
-            {
-                return "Email hoặc mật khẩu không chỉnh xác!";
-            }
-            return userlg;
-        }
+        //    SqlDataReader reader = cmd.ExecuteReader();
+        //    if (reader.HasRows)
+        //    {
+        //        while(reader.Read())
+        //        {
+        //            userlg = reader.GetString(0);
+        //            return userlg;
+        //        }
+        //        reader.Close();
+        //        conn.Close();
+        //    }
+        //    else
+        //    {
+        //        return "Email hoặc mật khẩu không chính xác!";
+        //    }
+        //    return userlg;
+        //}
 
         public static string checkSignUpDTO(UserCreate userCreate)
         {
@@ -92,24 +91,24 @@ namespace DAL
 
         }
 
-        private static bool checkEmailExists(string email)
-        {
-            SqlConnection conn = SqlConnectionData.Connect();
-            conn.Open();
+        //Check trên GUI tương tự bên trên tối ưu hóa thời gian request server
+        //private static bool checkEmailExists(string email)
+        //{
+        //    SqlConnection conn = SqlConnectionData.Connect();
+        //    conn.Open();
 
-            SqlCommand cmd = new SqlCommand("SELECT Email FROM users WHERE Email = @Email", conn);
-            cmd.Parameters.AddWithValue("@Email", email);
+        //    SqlCommand cmd = new SqlCommand("SELECT Email FROM users WHERE Email = @Email", conn);
+        //    cmd.Parameters.AddWithValue("@Email", email);
 
-            SqlDataReader reader = cmd.ExecuteReader();
+        //    SqlDataReader reader = cmd.ExecuteReader();
 
-            if (reader.HasRows)
-            {
-                return true;
-            }
+        //    if (reader.HasRows)
+        //    {
+        //        return true;
+        //    }
 
-            return false;
-        }
-
+        //    return false;
+        //}
     }
 }
 
