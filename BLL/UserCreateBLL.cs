@@ -8,8 +8,6 @@ using DTO;
 
 namespace BLL
 {
-
-
     public class UserCreateBLL
     {
         UserCreateAccess usCreateAccess = new UserCreateAccess();

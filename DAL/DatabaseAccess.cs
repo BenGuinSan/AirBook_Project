@@ -11,18 +11,49 @@ using System.Xml.Linq;
 
 namespace DAL
 {
-    // Tao ket noi voi db
-    public class SqlConnectionData
-    {
-        public static SqlConnection Connect()
-        {
-            string strcon = @"Data Source=PENGUINSAN\SQLEXPRESS;Initial Catalog=AIRBOOK;Integrated Security=True";
-            SqlConnection conn = new SqlConnection(strcon); // Khoi tao connect
-            return conn;
-        }
-    }
     public class DatabaseAccess
     {
+        static DatabaseConnection connection = new DatabaseConnection();
+        SqlConnection conn;
+        public DatabaseAccess()
+        {
+            conn = connection.Open();
+        }
+        //public T Execute<T>(string storedProcedureName, List<SqlParameter> parameters, Func<SqlDataReader, T> mapFunction)
+        //{
+        //    conn = connection.Open();
+        //    SqlCommand cmd = new SqlCommand(storedProcedureName, conn);
+        //    cmd.CommandType = CommandType.StoredProcedure;
+        //    cmd.Parameters.Clear();
+        //    if (parameters != null)
+        //    {
+        //        cmd.Parameters.AddRange(parameters.ToArray<SqlParameter>());
+        //    }
+
+        //    SqlDataReader reader = cmd.ExecuteReader();
+        //    return mapFunction(reader);
+        //}
+        public static T Execute<T>(string storedProcedureName, List<SqlParameter> parameters, Func<SqlDataReader, T> mapResult)
+        {
+            using (SqlConnection conn = connection.Open()) // Sử dụng using cho SqlConnection để đảm bảo rằng SqlConnection sẽ được đóng sau khi khối using kết thúc
+            {
+                using (SqlCommand cmd = new SqlCommand(storedProcedureName, conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Clear();
+                    if (parameters != null)
+                    {
+                        cmd.Parameters.AddRange(parameters.ToArray<SqlParameter>());
+                    }
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        return mapResult(reader);
+                    }
+                }
+            }
+        }
+
         //Check trên GUI vì còn phải check Role để xem nó có quyền gì rồi mới chuyển hướng cho vào AdminGUI hay ClientGUI
         //Tức là cần load listBUS trước sau đó tìm object nếu tìm không có thì đăng nhập thất bại
         //public static string checkLoginDTO(User user)
@@ -57,39 +88,41 @@ namespace DAL
         //    return userlg;
         //}
 
-        public static string checkSignUpDTO(UserCreate userCreate)
-        {
-            SqlConnection conn = SqlConnectionData.Connect();
-            conn.Open();
+        //public static string checkSignUpDTO(UserCreate userCreate)
+        //{
+        //    SqlConnection conn = SqlConnectionData.Connect();
+        //    conn.Open();
 
-            SqlCommand cmd = new SqlCommand("proc__signup", conn);
+        //    SqlCommand cmd = new SqlCommand("proc__signup", conn);
 
-            cmd.CommandType = CommandType.StoredProcedure;
+        //    cmd.CommandType = CommandType.StoredProcedure;
 
-            cmd.Parameters.AddWithValue(@"Email", userCreate.Email);
-            cmd.Parameters.AddWithValue(@"Pwd", userCreate.Pwd);
-            cmd.Parameters.AddWithValue(@"Real_name", userCreate.Real_name);
-            cmd.Parameters.AddWithValue(@"Username", userCreate.Real_name);
-            cmd.Parameters.AddWithValue(@"DoB", userCreate.DoB);
-            cmd.Parameters.AddWithValue(@"Gender", userCreate.Gender);
-            cmd.Parameters.AddWithValue(@"CCCD", userCreate.CCCD);
-            cmd.Parameters.AddWithValue(@"Nation", userCreate.Nation);
-            cmd.Parameters.AddWithValue(@"User_address", userCreate.User_address);
-            cmd.Parameters.AddWithValue(@"Phone_number", userCreate.Phone_number);
-            cmd.Parameters.AddWithValue(@"Date_create", DateTime.Now);
+        //    cmd.Parameters.AddWithValue(@"Email", userCreate.Email);
+        //    cmd.Parameters.AddWithValue(@"Pwd", userCreate.Pwd);
+        //    cmd.Parameters.AddWithValue(@"Real_name", userCreate.Real_name);
+        //    cmd.Parameters.AddWithValue(@"Username", userCreate.Real_name);
+        //    cmd.Parameters.AddWithValue(@"DoB", userCreate.DoB);
+        //    cmd.Parameters.AddWithValue(@"Gender", userCreate.Gender);
+        //    cmd.Parameters.AddWithValue(@"CCCD", userCreate.CCCD);
+        //    cmd.Parameters.AddWithValue(@"Nation", userCreate.Nation);
+        //    cmd.Parameters.AddWithValue(@"User_address", userCreate.User_address);
+        //    cmd.Parameters.AddWithValue(@"Phone_number", userCreate.Phone_number);
+        //    cmd.Parameters.AddWithValue(@"Date_create", DateTime.Now);
 
-            if (checkEmailExists(userCreate.Email))
-            {
-                return "Email đã tồn tại";
-            } else {
-                cmd.ExecuteNonQuery();
-            }
+        //    if (checkEmailExists(userCreate.Email))
+        //    {
+        //        return "Email đã tồn tại";
+        //    }
+        //    else
+        //    {
+        //        cmd.ExecuteNonQuery();
+        //    }
 
-            conn.Close();
+        //    conn.Close();
 
-            return null;
+        //    return null;
 
-        }
+        //}
 
         //Check trên GUI tương tự bên trên tối ưu hóa thời gian request server
         //private static bool checkEmailExists(string email)
