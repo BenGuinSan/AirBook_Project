@@ -10,72 +10,72 @@ namespace BLL
 {
     public class UserCreateBLL
     {
-        UserCreateAccess usCreateAccess = new UserCreateAccess();
-        public string checkSignUP(UserCreate userCreate)
+        UserSignUpAccess usSignUpAccess = new UserSignUpAccess();
+        public string checkSignUP(UserSignUp userSignUp)
         {
-            if (userCreate.Email == "" )
+            if (userSignUp.Email == "" )
             {
                 return "requeid_Email";
             }
-            if(userCreate.Pwd == "")
+            if (userSignUp.Pwd == "")
             {
                 return "requeid_Pwd";
             }
-            if (userCreate.Pwd.Contains(" "))
+            if (userSignUp.Pwd.Contains(" "))
             {
                 return "Pasword_has_space";
             }
-            if (userCreate.PwdAccsess == "")
+            if (userSignUp.PwdAccess == "")
             {
                 return "requeid_PwdAccess";
             }
-            if(userCreate.Real_name == "")
+            if(userSignUp.Real_name == "")
             {
                 return "requeid_Realname";
             }
-            if( userCreate.Nation == "")
+            if(userSignUp.Nation == "")
             {
                 return "requeid_Nation";
             }
-            if(userCreate.CCCD == "")
+            if(userSignUp.CCCD == "")
             {
                 return "requeid_CCCD";
             }
-            if(userCreate.User_address == "")
+            if(userSignUp.User_address == "")
             {
                 return "requeid_UserAddress";
             }
-            if(userCreate.Phone_number == "")
+            if(userSignUp.Phone_number == "")
             {
                 return "requeid_Phonenumber";
             }
-            if(userCreate.Pwd != userCreate.PwdAccsess)
+            if(userSignUp.Pwd != userSignUp.PwdAccess)
             {
                 return "Xác nhận mật khẩu không trùng với mật khẩu";
             }
-            if(userCreate.Email != "" && !IsValidEmail(userCreate.Email))
+            if(userSignUp.Email != "" && !IsValidEmail(userSignUp.Email))
             {
                 return "Định dạng email không chính xác";
             }
-            if(userCreate.Real_name != "" && !IsValidName(userCreate.Real_name))
+            if(userSignUp.Real_name != "" && !IsValidName(userSignUp.Real_name))
             {
                 return "Định dạng họ và tên không chính xác";
             }
-            if(userCreate.DoB > DateTime.Now)
+            if(userSignUp.DoB > DateTime.Now)
             {
                 return "Ngày sinh không thể là ngày mai";
             }
-            if(userCreate.Phone_number != "" && !IsValidPhone(userCreate.Phone_number))
+            if(userSignUp.Phone_number != "" && !IsValidPhone(userSignUp.Phone_number))
             {
                 return "Số điện thoại không đúng định dạng";
             }
-            if(userCreate.CCCD != "" && !IsValidCCCD(userCreate.CCCD))
+            if(userSignUp.CCCD != "" && !IsValidCCCD(userSignUp.CCCD))
             {
                 return "CCCD không đúng định dạng";
             }
             
 
-            string info = usCreateAccess.checkSignUp(userCreate);
+            string info = usSignUpAccess.CheckSignUp(userSignUp);
             return info;
         }
 

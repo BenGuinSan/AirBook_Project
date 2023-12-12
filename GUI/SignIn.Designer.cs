@@ -84,7 +84,7 @@
             this.pallete.ButtonStyles.ButtonCommon.OverrideDefault.Content.Padding = new System.Windows.Forms.Padding(8, -1, 8, -1);
             this.pallete.ButtonStyles.ButtonCommon.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.pallete.ButtonStyles.ButtonCommon.OverrideDefault.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.pallete.ButtonStyles.ButtonCommon.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Inter", 9.75F);
+            this.pallete.ButtonStyles.ButtonCommon.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.pallete.ButtonStyles.ButtonCommon.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(138)))), ((int)(((byte)(165)))));
             this.pallete.ButtonStyles.ButtonCommon.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(138)))), ((int)(((byte)(165)))));
             this.pallete.ButtonStyles.ButtonCommon.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -95,7 +95,7 @@
             this.pallete.ButtonStyles.ButtonCommon.StateNormal.Content.AdjacentGap = 8;
             this.pallete.ButtonStyles.ButtonCommon.StateNormal.Content.Padding = new System.Windows.Forms.Padding(8, -1, 8, -1);
             this.pallete.ButtonStyles.ButtonCommon.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.pallete.ButtonStyles.ButtonCommon.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pallete.ButtonStyles.ButtonCommon.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pallete.ButtonStyles.ButtonCommon.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(161)))), ((int)(((byte)(183)))));
             this.pallete.ButtonStyles.ButtonCommon.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(161)))), ((int)(((byte)(183)))));
             this.pallete.ButtonStyles.ButtonCommon.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -107,7 +107,7 @@
             this.pallete.ButtonStyles.ButtonCommon.StatePressed.Content.Padding = new System.Windows.Forms.Padding(8, -1, 8, -1);
             this.pallete.ButtonStyles.ButtonCommon.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.pallete.ButtonStyles.ButtonCommon.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.pallete.ButtonStyles.ButtonCommon.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Inter", 9.75F);
+            this.pallete.ButtonStyles.ButtonCommon.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.pallete.ButtonStyles.ButtonCommon.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(161)))), ((int)(((byte)(183)))));
             this.pallete.ButtonStyles.ButtonCommon.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(161)))), ((int)(((byte)(183)))));
             this.pallete.ButtonStyles.ButtonCommon.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -119,7 +119,7 @@
             this.pallete.ButtonStyles.ButtonCommon.StateTracking.Content.Padding = new System.Windows.Forms.Padding(8, -1, 8, -1);
             this.pallete.ButtonStyles.ButtonCommon.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.pallete.ButtonStyles.ButtonCommon.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.pallete.ButtonStyles.ButtonCommon.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Inter", 9.75F);
+            this.pallete.ButtonStyles.ButtonCommon.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.pallete.ButtonStyles.ButtonCustom1.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(243)))), ((int)(((byte)(246)))));
             this.pallete.ButtonStyles.ButtonCustom1.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(243)))), ((int)(((byte)(246)))));
             this.pallete.ButtonStyles.ButtonCustom1.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -253,6 +253,7 @@
             this.btnSignup.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.btnSignup.Values.Image = global::GUI.Properties.Resources.action_add_pri18;
             this.btnSignup.Values.Text = resources.GetString("btnSignup.Values.Text");
+            this.btnSignup.Click += new System.EventHandler(this.btnSignup_Click);
             // 
             // btnSignin
             // 
